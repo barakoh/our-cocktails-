@@ -1,0 +1,217 @@
+<html><head><base href="https://cocktailmania.com/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>הקוקטיילים שלנו - חווית טעמים עולמית</title><style>
+    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+    
+    :root {
+        --primary-color: #FF6B6B;
+        --secondary-color: #4ECDC4;
+        --accent-color: #FFD93D;
+        --text-color: #2C3E50;
+        --bg-color: #F7F9FC;
+    }
+    
+    body {
+        font-family: 'Heebo', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        direction: rtl;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        text-align: center;
+        padding: 60px 0;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .header-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    h1 {
+        font-size: 4em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .subtitle {
+        font-size: 1.5em;
+        margin-top: 10px;
+        opacity: 0.8;
+    }
+    
+    .cocktail-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    
+    .cocktail-card {
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        width: calc(33.333% - 20px);
+        margin-bottom: 30px;
+    }
+    
+    .cocktail-card:hover {
+        transform: translateY(-10px) rotate(2deg);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .cocktail-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    .cocktail-info {
+        padding: 20px;
+    }
+    
+    .cocktail-name {
+        font-size: 1.5em;
+        color: var(--primary-color);
+        margin: 0 0 10px 0;
+    }
+    
+    .cocktail-description {
+        font-size: 0.9em;
+        color: #666;
+        margin-bottom: 15px;
+    }
+    
+    .cocktail-ingredients {
+        font-size: 0.85em;
+        color: #888;
+    }
+    
+    .cocktail-origin {
+        font-weight: bold;
+        color: var(--secondary-color);
+        margin-top: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .cocktail-card {
+            width: 100%;
+        }
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .cocktail-card {
+        animation: fadeIn 0.5s ease-out forwards;
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+    
+    .cocktail-image {
+        animation: float 5s ease-in-out infinite;
+    }
+</style></head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>הקוקטיילים שלנו</h1>
+            <p class="subtitle">חווית טעמים עולמית - גלה את הקוקטיילים המיוחדים שלנו</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="cocktail-gallery">
+            <div class="cocktail-card">
+                <img src="https://cocktailmania.com/images/espresso-martini.jpg" alt="אספרסו מרטיני בכוס מרטיני עם פולי קפה" class="cocktail-image" width="400" height="250">
+                <div class="cocktail-info">
+                    <h3 class="cocktail-name">אספרסו מרטיני</h3>
+                    <p class="cocktail-description">קוקטייל עשיר וקרמי המשלב את הטעם העמוק של קפה עם חוזק הוודקה.</p>
+                    <p class="cocktail-ingredients">מרכיבים: וודקה, ליקר קפה, אספרסו טרי, סירופ סוכר</p>
+                    <p class="cocktail-origin">מקור: לונדון, אנגליה</p>
+                </div>
+            </div>
+
+            <div class="cocktail-card">
+                <img src="https://cocktailmania.com/images/pina-colada.jpg" alt="פינה קולדה בכוס גבוהה עם קישוט אננס" class="cocktail-image" width="400" height="250">
+                <div class="cocktail-info">
+                    <h3 class="cocktail-name">פינה קולדה</h3>
+                    <p class="cocktail-description">משקה טרופי מרענן המשלב את המתיקות של אננס עם הקרמיות של קרם קוקוס.</p>
+                    <p class="cocktail-ingredients">מרכיבים: רום לבן, קרם קוקוס, מיץ אננס</p>
+                    <p class="cocktail-origin">מקור: פורטו ריקו</p>
+                </div>
+            </div>
+
+            <div class="cocktail-card">
+                <img src="https://cocktailmania.com/images/watermelon-daiquiri.jpg" alt="דאקירי אבטיח בכוס מרגריטה עם קישוט אבטיח" class="cocktail-image" width="400" height="250">
+                <div class="cocktail-info">
+                    <h3 class="cocktail-name">דאקירי אבטיח</h3>
+                    <p class="cocktail-description">גרסה רעננה וקיצית לקלאסיקה הקובנית, עם טעם מתוק ומרענן של אבטיח.</p>
+                    <p class="cocktail-ingredients">מרכיבים: רום לבן, אבטיח טרי, מיץ ליים, סירופ סוכר</p>
+                    <p class="cocktail-origin">מקור: וריאציה על הדאקירי הקובני</p>
+                </div>
+            </div>
+
+            <div class="cocktail-card">
+                <img src="https://cocktailmania.com/images/lychee-martini.jpg" alt="ליצ'י מרטיני בכוס מרטיני עם ליצ'י שלם" class="cocktail-image" width="400" height="250">
+                <div class="cocktail-info">
+                    <h3 class="cocktail-name">ליצ'י מרטיני</h3>
+                    <p class="cocktail-description">קוקטייל אלגנטי ופירותי המשלב את הטעם העדין של ליצ'י עם חריפות הוודקה.</p>
+                    <p class="cocktail-ingredients">מרכיבים: וודקה, ליקר ליצ'י, מיץ ליים, סירופ סוכר</p>
+                    <p class="cocktail-origin">מקור: אסיה</p>
+                </div>
+            </div>
+
+            <div class="cocktail-card">
+                <img src="https://cocktailmania.com/images/orgasm.jpg" alt="אורגזמה בכוס שוט שכבתית" class="cocktail-image" width="400" height="250">
+                <div class="cocktail-info">
+                    <h3 class="cocktail-name">אורגזמה</h3>
+                    <p class="cocktail-description">שוט מפתה ומתוק המשלב מספר ליקרים ליצירת חוויה מענגת במיוחד.</p>
+                    <p class="cocktail-ingredients">מרכיבים: ליקר קפה, ליקר אמרטו, ליקר אירי, קצפת</p>
+                    <p class="cocktail-origin">מקור: ארצות הברית</p>
+                </div>
+            </div>
+
+            <div class="cocktail-card">
+                <img src="https://cocktailmania.com/images/cosmopolitan.jpg" alt="קוסמופוליטן בכוס מרטיני עם קליפת לימון" class="cocktail-image" width="400" height="250">
+                <div class="cocktail-info">
+                    <h3 class="cocktail-name">קוסמופוליטן</h3>
+                    <p class="cocktail-description">קוקטייל אייקוני ואלגנטי המשלב חמיצות, מתיקות וטעמי פירות.</p>
+                    <p class="cocktail-ingredients">מרכיבים: וודקה, ליקר תפוזים, מיץ חמוציות, מיץ ליים</p>
+                    <p class="cocktail-origin">מקור: ניו יורק, ארצות הברית</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const cards = document.querySelectorAll('.cocktail-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+    });
+    </script>
+</body></html>
